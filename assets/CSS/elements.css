@@ -15,6 +15,36 @@ width: 100px;
 height: 100px;
 }
 
+#container {
+    text-align: center;
+
+}
+
+#boxIn {
+    animation: animation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.fadeInBox {
+    animation: fadeInAnimation ease 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#hoverBox {
+    width: 400px;
+    color: white;
+    background-color: black;
+    transition: background-color 1s ease, width 2s ease, border-radius 3s ease;
+}
+
+#hoverBox:hover {
+    width: 600px;
+    background-color: red;
+    border-radius: 20px;
+}
+
 
 
 .pop{
@@ -23,4 +53,21 @@ height: 100px;
 
 }
 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
+
+@keyframes animation {
+    from {
+        transform: translateX(-800px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
